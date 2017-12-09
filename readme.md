@@ -288,14 +288,14 @@
 
  - 如果出现 bug 的时候打印类似这样的 log 信息
 
-	unable to handle kernel paging request at address C0000010
-	Oops: 0002
-	EIP:   0010:XXXXXXXX
-	eax: xxxxxxxx   ebx: xxxxxxxx   ecx: xxxxxxxx   edx: xxxxxxxx
-	esi: xxxxxxxx   edi: xxxxxxxx   ebp: xxxxxxxx
-	ds: xxxx  es: xxxx  fs: xxxx  gs: xxxx
-	Pid: xx, process nr: xx
-	xx xx xx xx xx xx xx xx xx xx
+		unable to handle kernel paging request at address C0000010
+		Oops: 0002
+		EIP:   0010:XXXXXXXX
+		eax: xxxxxxxx   ebx: xxxxxxxx   ecx: xxxxxxxx   edx: xxxxxxxx
+		esi: xxxxxxxx   edi: xxxxxxxx   ebp: xxxxxxxx
+		ds: xxxx  es: xxxx  fs: xxxx  gs: xxxx
+		Pid: xx, process nr: xx
+		xx xx xx xx xx xx xx xx xx xx
 
    屏幕上或系统 log 里记录了类似上面的信息，请准确地将它们复制下来。这些可能看
    起来毫无意义，但其中却可能包含了用于调试该问题的信息。它上部的字符也很重要：
