@@ -116,37 +116,32 @@
 
    You should now have the sources correctly installed.
 
-## SOFTWARE REQUIREMENTS
+## 软件要求
 
-   Compiling and running the 2.6.xx kernels requires up-to-date
-   versions of various software packages.  Consult
-   Documentation/Changes for the minimum version numbers required
-   and how to get updates for these packages.  Beware that using
-   excessively old versions of these packages can cause indirect
-   errors that are very difficult to track down, so don't assume that
-   you can just update packages when obvious problems arise during
-   build or operation.
+   编译并运行 2.6.xx 内核需要一些较新的软件包。从 Documentation/Changes 中可以查
+   找到有关于所需软件包的最低版本号，以及如何升级这些软件。注意使用一些过老版本
+   的软件包会导致间接的错误，且这些错误非常难去跟踪，所以不要在很明显的问题发生
+   后再升级包。
 
-## BUILD directory for the kernel:
+## 构建内核路径
 
-   When compiling the kernel all output files will per default be
-   stored together with the kernel source code.
-   Using the option "make O=output/dir" allow you to specify an alternate
-   place for the output files (including .config).
-   Example:
-     kernel source code:	/usr/src/linux-2.6.N
-     build directory:		/home/name/build/kernel
+   默认情况下，编译内核源代码所有生成的文件会与内核源代码在同个目录下。
+   "make O=output/dir" 命令允许你指定特定的目录来放生成的文件(包括 .config)。
+   例如 kernel 和编译输出目录如下：
 
-   To configure and build the kernel use:
-   cd /usr/src/linux-2.6.N
-   make O=/home/name/build/kernel menuconfig
-   make O=/home/name/build/kernel
-   sudo make O=/home/name/build/kernel modules_install install
+		kernel source code:     /usr/src/linux-2.6.N
+		build directory:        /home/name/build/kernel
 
-   Please note: If the 'O=output/dir' option is used then it must be
-   used for all invocations of make.
+   则需要使用下面的命令来配置和编译内核:
 
-## CONFIGURING the kernel:
+		cd /usr/src/linux-2.6.N
+		make O=/home/name/build/kernel menuconfig
+		make O=/home/name/build/kernel
+		sudo make O=/home/name/build/kernel modules_install install
+
+   请注意：一旦使用了 'O=output/dir' 这个选项，则后面的命令都要使用这个选项。
+
+## 配置内核
 
    Do not skip this step even if you are only upgrading one minor
    version.  New configuration options are added in each release, and
