@@ -1,6 +1,6 @@
 # Linux 内核发行版本 2.6.xx
 
- - <http://kernel.org/>
+<http://kernel.org/>
 
 本文是 linux 2.6 的版本说明。本文主要介绍什么是 linux，如何安装 kernel 以及如果
 出现问题该怎么处理。 
@@ -56,27 +56,24 @@
  - 如果安装所有的源代码，将压缩包放在某个你有相应权限的目录下(在你的 home 目录下
    就可以了)，然后解压：
 
-	gzip -cd linux-2.6.XX.tar.gz | tar xvf -
+		gzip -cd linux-2.6.XX.tar.gz | tar xvf -
 
    或者
 
-	bzip2 -dc linux-2.6.XX.tar.bz2 | tar xvf -
+		bzip2 -dc linux-2.6.XX.tar.bz2 | tar xvf -
 
-   Replace "XX" with the version number of the latest kernel.
+   其中 "XX" 指对应的内核版本号(一般升级时我们都选择最新的内核版本)。
 
-   Do NOT use the /usr/src/linux area! This area has a (usually
-   incomplete) set of kernel headers that are used by the library header
-   files.  They should match the library, and not get messed up by
-   whatever the kernel-du-jour happens to be.
+   请不要使用 /usr/src/linux 这个区域。这个区域包含库头文件需要使用的大量(通常不
+   完全)的内核头文件。它们必须与库相匹配，而不应该因为内核变更弄的一团糟。
 
- - You can also upgrade between 2.6.xx releases by patching.  Patches are
-   distributed in the traditional gzip and the newer bzip2 format.  To
-   install by patching, get all the newer patch files, enter the
-   top level directory of the kernel source (linux-2.6.xx) and execute:
+ - 你可以通过打补丁在 2.6.xx 发布版之间升级。补丁以传统的 gzip 格式和较新的
+   bzip2格式提供。打补丁时，先下载所有新的补丁文件，进入内核源码的顶层目录，然后
+   执行以下命令：
 
 		gzip -cd ../patch-2.6.xx.gz | patch -p1
 
-   or
+   或者
 
 		bzip2 -dc ../patch-2.6.xx.bz2 | patch -p1
 
