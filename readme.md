@@ -207,22 +207,19 @@
 
 ## 编译内核
 
- - Make sure you have at least gcc 3.2 available.
-   For more information, refer to Documentation/Changes.
-
-   Please note that you can still run a.out user programs with this kernel.
+ - 确认 gcc 至少为 3.2 版本。在 Documentation/Changes 中可查阅到更多的信息。
+   请注意当前的内核仍能够运行 a.out 形式的用户程序。
 
  - Do a "make" to create a compressed kernel image. It is also
    possible to do "make install" if you have lilo installed to suit the
    kernel makefiles, but you may want to check your particular lilo setup first.
 
-   To do the actual install you have to be root, but none of the normal
-   build should require that. Don't take the name of root in vain.
+   真正安装时需要root权限，但其他的编译动作不需要。尽量不要使用root身份来执行命
+   令。
 
- - If you configured any of the parts of the kernel as `modules', you
-   will also have to do "make modules_install".
+ - 如果将某个部份编译成了模块 "modules"，还需要运行 "make modules_install" 命令。
 
- - Verbose kernel compile/build output:
+ - 内核编译/构建时的详细输出信息：
 
    Normally the kernel build system runs in a fairly quiet mode (but not
    totally silent).  However, sometimes you or other kernel developers need
@@ -230,7 +227,7 @@
    For this, use "verbose" build mode.  This is done by inserting
    "V=1" in the "make" command.  E.g.:
 
-	make V=1 all
+		make V=1 all
 
    To have the build system also tell the reason for the rebuild of each
    target, use "V=2".  The default is "V=0".
@@ -266,15 +263,12 @@
    old kernel image (say, /vmlinux.old) in case the new one does not
    work.  See the LILO docs for more information. 
 
-   After reinstalling LILO, you should be all set.  Shutdown the system,
-   reboot, and enjoy!
+   重装完LILO之后，所有的工作都作完了。然后关掉系统。
 
-   If you ever need to change the default root device, video mode,
-   ramdisk size, etc.  in the kernel image, use the 'rdev' program (or
-   alternatively the LILO boot options when appropriate).  No need to
-   recompile the kernel to change these parameters. 
+   如果还需要更改内核中默认的根设备、视频模式、ramdisk 的大小等，使用 "rdev" 程
+   序(如果可能的话用使用 LILO 加载选项)，而不必重新编译内核来改变这些参数。
 
- - Reboot with the new kernel and enjoy. 
+   - 重启后开始愉快的 Linux 之旅吧。
 
 ## 倘若出现了错误
 
