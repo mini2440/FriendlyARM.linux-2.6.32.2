@@ -1,19 +1,12 @@
-	Linux kernel release 2.6.xx <http://kernel.org/>
+        Linux 内核发行版本 2.6.xx <http://kernel.org/>
 
-These are the release notes for Linux version 2.6.  Read them carefully,
-as they tell you what this is all about, explain how to install the
-kernel, and what to do if something goes wrong. 
+本文是 linux 2.6 的版本说明。本文主要介绍什么是 linux，如何安装 kernel 以及如果出现问题该怎么处理。 
 
-WHAT IS LINUX?
+什么是 LINUX?
 
-  Linux is a clone of the operating system Unix, written from scratch by
-  Linus Torvalds with assistance from a loosely-knit team of hackers across
-  the Net. It aims towards POSIX and Single UNIX Specification compliance.
-
-  It has all the features you would expect in a modern fully-fledged Unix,
-  including true multitasking, virtual memory, shared libraries, demand
-  loading, shared copy-on-write executables, proper memory management,
-  and multistack networking including IPv4 and IPv6.
+  Linux 是 Unix 操作系统的一个克隆，是由 Linus Torvalds 和一群网络黑客一起从头开始写的一个操作系统。
+  它的目标是 POSIX 和单一 UNIX 规范的遵从性。(It aims towards POSIX and Single UNIX Specification compliance.)
+  它拥有在目前成熟的 Unix 中所有的特性，包括真正的多任务处理、虚拟内存、共享库、需求加载、共享复制的可执行文件、正确的内存管理以及包括IPv4和IPv6在内的多栈网络。
 
   It is distributed under the GNU General Public License - see the
   accompanying COPYING file for more details. 
