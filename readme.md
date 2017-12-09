@@ -129,15 +129,15 @@
    "make O=output/dir" 命令允许你指定特定的目录来放生成的文件(包括 .config)。
    例如 kernel 和编译输出目录如下：
 
-		kernel source code:     /usr/src/linux-2.6.N
-		build directory:        /home/name/build/kernel
+	kernel source code:     /usr/src/linux-2.6.N
+	build directory:        /home/name/build/kernel
 
    则需要使用下面的命令来配置和编译内核:
 
-		cd /usr/src/linux-2.6.N
-		make O=/home/name/build/kernel menuconfig
-		make O=/home/name/build/kernel
-		sudo make O=/home/name/build/kernel modules_install install
+	cd /usr/src/linux-2.6.N
+	make O=/home/name/build/kernel menuconfig
+	make O=/home/name/build/kernel
+	sudo make O=/home/name/build/kernel modules_install install
 
    请注意：一旦使用了 'O=output/dir' 这个选项，则后面的命令都要使用这个选项。
 
@@ -205,7 +205,7 @@
 	  should probably answer 'n' to the questions for
           "development", "experimental", or "debugging" features.
 
-## COMPILING the kernel:
+## 编译内核
 
  - Make sure you have at least gcc 3.2 available.
    For more information, refer to Documentation/Changes.
@@ -276,21 +276,17 @@
 
  - Reboot with the new kernel and enjoy. 
 
-## IF SOMETHING GOES WRONG:
+## 倘若出现了错误
 
- - If you have problems that seem to be due to kernel bugs, please check
-   the file MAINTAINERS to see if there is a particular person associated
-   with the part of the kernel that you are having trouble with. If there
-   isn't anyone listed there, then the second best thing is to mail
-   them to me (torvalds@linux-foundation.org), and possibly to any other
-   relevant mailing-list or to the newsgroup.
+ - 如果问题看起来像是内核的 bug，请检查 MAINTAINERS 来查看出错的部份是否有专门的
+   人来维护，如果没有，请向 torvalds@linux-foundation.org 发邮件，如果可能的话，
+   也可向相关的邮件列表发邮件。
 
- - In all bug-reports, *please* tell what kernel you are talking about,
-   how to duplicate the problem, and what your setup is (use your common
-   sense).  If the problem is new, tell me so, and if the problem is
-   old, please try to tell me when you first noticed it.
+ - 在报告 bug 时，请详细描述你所用的是什么内核、如何重现你所遇到的问题、你做了哪
+   设置(你感觉会是什么问题)。如果是新问题，告诉我这些，如果是旧问题(该问题以前可
+   能被讨论过), 请告诉我你是什么时候开始注意该问题的。
 
- - If the bug results in a message like
+ - 如果出现 bug 的时候打印类似这样的 log 信息
 
 	unable to handle kernel paging request at address C0000010
 	Oops: 0002
@@ -301,13 +297,10 @@
 	Pid: xx, process nr: xx
 	xx xx xx xx xx xx xx xx xx xx
 
-   or similar kernel debugging information on your screen or in your
-   system log, please duplicate it *exactly*.  The dump may look
-   incomprehensible to you, but it does contain information that may
-   help debugging the problem.  The text above the dump is also
-   important: it tells something about why the kernel dumped code (in
-   the above example it's due to a bad kernel pointer). More information
-   on making sense of the dump is in Documentation/oops-tracing.txt
+   屏幕上或系统 log 里记录了类似上面的信息，请准确地将它们复制下来。这些可能看
+   起来毫无意义，但其中却可能包含了用于调试该问题的信息。它上部的字符也很重要：
+   它记录了内核崩溃代码(上面的例子里的错误代码表示出错的原因是错误的内核指针)。
+   更多关于这类的信息可查看 Documentation/oops-tracing.txt。
 
  - If you compiled the kernel with CONFIG_KALLSYMS you can send the dump
    as is, otherwise you will have to use the "ksymoops" program to make
