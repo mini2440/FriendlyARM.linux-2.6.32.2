@@ -1,17 +1,20 @@
-        Linux 内核发行版本 2.6.xx <http://kernel.org/>
+#        Linux 内核发行版本 2.6.xx <http://kernel.org/>
 
-本文是 linux 2.6 的版本说明。本文主要介绍什么是 linux，如何安装 kernel 以及如果出现问题该怎么处理。 
+本文是 linux 2.6 的版本说明。本文主要介绍什么是 linux，如何安装 kernel 以及如果
+出现问题该怎么处理。 
 
-什么是 LINUX?
+## 什么是 LINUX?
 
-  Linux 是 Unix 操作系统的一个克隆，是由 Linus Torvalds 和一群网络黑客一起从头开始写的一个操作系统。
-  它的目标是 POSIX 和单一 UNIX 规范的遵从性。(It aims towards POSIX and Single UNIX Specification compliance.)
-  它拥有在目前成熟的 Unix 中所有的特性，包括真正的多任务处理、虚拟内存、共享库、需求加载、共享复制的可执行文件、正确的内存管理以及包括IPv4和IPv6在内的多栈网络。
+  Linux 是 Unix 操作系统的一个克隆，是由 Linus Torvalds 和一群网络黑客从头开始写
+  的一个操作系统。Linux 的目标是更加符合 POSIX 和 Single Unix 规格标准。
 
-  It is distributed under the GNU General Public License - see the
-  accompanying COPYING file for more details. 
+  它拥有在现代成熟的 Unix 中所有的特性，包括真正的多任务处理、虚拟内存、共享库、
+  加载器、执行程序的共享写时拷贝技术(STL)、优化的内存管理，还有多网络协议如 IPv4
+  和 IPv6。
 
-ON WHAT HARDWARE DOES IT RUN?
+  它在GNU公共许可证的保护下发行。
+
+## 硬件运行环境
 
   Although originally developed first for 32-bit x86-based PCs (386 or higher),
   today Linux also runs on (at least) the Compaq Alpha AXP, Sun SPARC and
