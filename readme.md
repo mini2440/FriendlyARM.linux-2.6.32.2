@@ -1,4 +1,6 @@
-# Linux 内核发行版本 2.6.xx <http://kernel.org/>
+# Linux 内核发行版本 2.6.xx
+
+ - <http://kernel.org/>
 
 本文是 linux 2.6 的版本说明。本文主要介绍什么是 linux，如何安装 kernel 以及如果
 出现问题该怎么处理。 
@@ -33,8 +35,8 @@
 ## 文档
 
  - 已经有大量针对 Linux 或关于通用 Unix 问题的文档，或以电子档的形式在网络上、或
-   以书本的形式发行。这里建议在任何分享的 Linux 的文档都可以好好看看，这份注记不
-   是作为系统的文档而提供的，有很多更好的资源适合你去阅读。
+   以书本的形式发行。这里建议在任何地方分享的 Linux 的文档都值得好好看看，这份注
+   记不是作为系统的文档而提供的，有很多更好的资源适合你去阅读。
 
  - 在 Documentation/ 的子目录下有许多不同的 README 文件，比如其中会有关于一些驱
    动的内核安装说明。Documentation/00-INDEX 文件中包含关于各文件主要内容介绍的索
@@ -45,17 +47,20 @@
    以通过使用 "make psdocs", "make pdfdocs", "make htmldocs" 或 "make mandocs"
    命令来生成相应格式的文档。
 
-INSTALLING the kernel source:
+## 安装内核源码
 
  - If you install the full sources, put the kernel tarball in a
    directory where you have permissions (eg. your home directory) and
    unpack it:
+   
+ - 如果安装所有的源代码，将压缩包放在某个你有相应权限的目录下(在你的 home 目录下
+   就可以了)，然后解压：
 
-		gzip -cd linux-2.6.XX.tar.gz | tar xvf -
+	gzip -cd linux-2.6.XX.tar.gz | tar xvf -
 
-   or
-		bzip2 -dc linux-2.6.XX.tar.bz2 | tar xvf -
+   或者
 
+	bzip2 -dc linux-2.6.XX.tar.bz2 | tar xvf -
 
    Replace "XX" with the version number of the latest kernel.
 
@@ -72,6 +77,7 @@ INSTALLING the kernel source:
 		gzip -cd ../patch-2.6.xx.gz | patch -p1
 
    or
+
 		bzip2 -dc ../patch-2.6.xx.bz2 | patch -p1
 
    (repeat xx for all versions bigger than the version of your current
@@ -113,7 +119,7 @@ INSTALLING the kernel source:
 
    You should now have the sources correctly installed.
 
-SOFTWARE REQUIREMENTS
+## SOFTWARE REQUIREMENTS
 
    Compiling and running the 2.6.xx kernels requires up-to-date
    versions of various software packages.  Consult
@@ -124,7 +130,7 @@ SOFTWARE REQUIREMENTS
    you can just update packages when obvious problems arise during
    build or operation.
 
-BUILD directory for the kernel:
+## BUILD directory for the kernel:
 
    When compiling the kernel all output files will per default be
    stored together with the kernel source code.
@@ -143,7 +149,7 @@ BUILD directory for the kernel:
    Please note: If the 'O=output/dir' option is used then it must be
    used for all invocations of make.
 
-CONFIGURING the kernel:
+## CONFIGURING the kernel:
 
    Do not skip this step even if you are only upgrading one minor
    version.  New configuration options are added in each release, and
@@ -207,7 +213,7 @@ CONFIGURING the kernel:
 	  should probably answer 'n' to the questions for
           "development", "experimental", or "debugging" features.
 
-COMPILING the kernel:
+## COMPILING the kernel:
 
  - Make sure you have at least gcc 3.2 available.
    For more information, refer to Documentation/Changes.
@@ -278,7 +284,7 @@ COMPILING the kernel:
 
  - Reboot with the new kernel and enjoy. 
 
-IF SOMETHING GOES WRONG:
+## IF SOMETHING GOES WRONG:
 
  - If you have problems that seem to be due to kernel bugs, please check
    the file MAINTAINERS to see if there is a particular person associated
