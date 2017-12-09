@@ -1,4 +1,4 @@
-#        Linux 内核发行版本 2.6.xx <http://kernel.org/>
+# Linux 内核发行版本 2.6.xx <http://kernel.org/>
 
 本文是 linux 2.6 的版本说明。本文主要介绍什么是 linux，如何安装 kernel 以及如果
 出现问题该怎么处理。 
@@ -16,41 +16,34 @@
 
 ## 硬件运行环境
 
-  Although originally developed first for 32-bit x86-based PCs (386 or higher),
-  today Linux also runs on (at least) the Compaq Alpha AXP, Sun SPARC and
-  UltraSPARC, Motorola 68000, PowerPC, PowerPC64, ARM, Hitachi SuperH, Cell,
-  IBM S/390, MIPS, HP PA-RISC, Intel IA-64, DEC VAX, AMD x86-64, AXIS CRIS,
-  Xtensa, AVR32 and Renesas M32R architectures.
+  虽然最初的 Linux 运行在 x86 架构的 32 位机上，但是随着 Linux 的发展，目前至少
+  可以运行下以下架构的处理器上：Compaq Alpha AXP, Sun SPARC and UltraSPARC,
+  Motorola 68000, PowerPC, PowerPC64, ARM, Hitachi SuperH, Cell, IBM S/390,
+  MIPS, HP PA-RISC, Intel IA-64, DEC VAX, AMD x86-64, AXIS CRIS, Xtensa,
+  AVR32 and Renesas M32R architectures.
 
-  Linux is easily portable to most general-purpose 32- or 64-bit architectures
-  as long as they have a paged memory management unit (PMMU) and a port of the
-  GNU C compiler (gcc) (part of The GNU Compiler Collection, GCC). Linux has
-  also been ported to a number of architectures without a PMMU, although
-  functionality is then obviously somewhat limited.
-  Linux has also been ported to itself. You can now run the kernel as a
-  userspace application - this is called UserMode Linux (UML).
+  只要含有分页机制的内存管理单元(PMMU) 和 GNU C 编译器接口(The GNU Compiler
+  Collection 的组成部分，GCC)，Linux 就能很容易的移植到主流的 32 或 64 位体系结
+  构的处理器上。Linux也能在一些没有 PMMU 的架构上进行移植，虽然功能性上面或多或
+  少有所限制。
 
-DOCUMENTATION:
+  Linux 还能移植到它自己身上，可以像用户空间的应用程序一样运行内核 -- 这叫 "用户
+  模式 Linux" (UserMode Linux，简称 UML)。
 
- - There is a lot of documentation available both in electronic form on
-   the Internet and in books, both Linux-specific and pertaining to
-   general UNIX questions.  I'd recommend looking into the documentation
-   subdirectories on any Linux FTP site for the LDP (Linux Documentation
-   Project) books.  This README is not meant to be documentation on the
-   system: there are much better sources available.
+## 文档
 
- - There are various README files in the Documentation/ subdirectory:
-   these typically contain kernel-specific installation notes for some 
-   drivers for example. See Documentation/00-INDEX for a list of what
-   is contained in each file.  Please read the Changes file, as it
-   contains information about the problems, which may result by upgrading
-   your kernel.
+ - 已经有大量针对 Linux 或关于通用 Unix 问题的文档，或以电子档的形式在网络上、或
+   以书本的形式发行。这里建议在任何分享的 Linux 的文档都可以好好看看，这份注记不
+   是作为系统的文档而提供的，有很多更好的资源适合你去阅读。
 
- - The Documentation/DocBook/ subdirectory contains several guides for
-   kernel developers and users.  These guides can be rendered in a
-   number of formats:  PostScript (.ps), PDF, HTML, & man-pages, among others.
-   After installation, "make psdocs", "make pdfdocs", "make htmldocs",
-   or "make mandocs" will render the documentation in the requested format.
+ - 在 Documentation/ 的子目录下有许多不同的 README 文件，比如其中会有关于一些驱
+   动的内核安装说明。Documentation/00-INDEX 文件中包含关于各文件主要内容介绍的索
+   引。也看下 Changes 文件，其中有关于升级内核的一些信息。
+
+ - Documentation/DocBook/ 子目录下包含一些内核开发人员和用户的指南。这些指南提供
+   多种格式：PostScript(.ps), PDF, HTML, 和 man-pages 等。内核代码安装好之后，可
+   以通过使用 "make psdocs", "make pdfdocs", "make htmldocs" 或 "make mandocs"
+   命令来生成相应格式的文档。
 
 INSTALLING the kernel source:
 
