@@ -52,7 +52,9 @@ static int sbc2440_leds_ioctl(
 		if (arg > 4) {
 			return -EINVAL;
 		}
+#if 0
 		s3c2410_gpio_setpin(led_table[arg], !cmd);
+#endif
 		return 0;
 	default:
 		return -EINVAL;
@@ -78,7 +80,8 @@ static int __init dev_init(void)
 	
 	for (i = 0; i < 4; i++) {
 		s3c2410_gpio_cfgpin(led_table[i], led_cfg_table[i]);
-		s3c2410_gpio_setpin(led_table[i], 0);
+		/* modify the led light off when board power on */
+		s3c2410_gpio_setpin(led_table[i], 1);
 	}
 
 	ret = misc_register(&misc);
